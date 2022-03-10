@@ -18,6 +18,7 @@
 
     //Performing GET requests to the OMDB API and logging the responses to the console
     //example
+
     $.ajax({
       url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
       method: "GET"
@@ -29,21 +30,42 @@
     //Write and AJAX call for the REVENANT "https://www.omdbapi.com/?t=the+revenant&y=&plot=short&apikey=trilogy"
     //console.log Plot
 
-    
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=the+revenant&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response.Plot);
+    });
 
     //"https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy"
     //console.log Awards
     
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response.Awards);
+    });
 
     //"https://www.omdbapi.com/?t=space+jam&y=&plot=short&apikey=trilogy"
     //Step 2: console.log Language
 
-
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=space+jam&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response.Language);
+    });
 
     //Based on the previous example,
     //Write AJAX call for any other movie using the same format
     
-
+    $.ajax({
+      url: "http://www.omdbapi.com/?t=Peaky+Blinders&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    });
    
 
 
